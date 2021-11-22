@@ -48,12 +48,21 @@ def move_mouse_rel(x,y,duration=0.2):
 def mouse_click():
     pass
 
+def scroll(amount_to_scroll):
+    '''
+    窗口滚动
+    :param amount_to_scroll:滚动的格数，正数向上、负数向下
+    :return:
+    '''
+    pyautogui.scroll(clicks=amount_to_scroll)
+
 def main():
     try:
         # print(get_mouse_position())
         # print(get_img_position("wechat.png"))
         # shot_screen()
-        move_mouse_rel(-100,100)
+        # move_mouse_rel(-100,100)
+        scroll(1000)
     except Exception as e:
         print(e)
 
